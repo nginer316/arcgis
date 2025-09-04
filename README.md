@@ -64,4 +64,4 @@ remotes::install_github("R-ArcGIS/arcgis")
 ## Learn More
 
 To learn more about the R-ArcGIS Bridge project, visit the [developer
-site]((https://developers.arcgis.com/r-bridge))
+site](https://developers.arcgis.com/r-bridge).
