@@ -4,28 +4,54 @@
 # arcgis
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/R-ArcGIS/arcgis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/R-ArcGIS/arcgis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-**NOTE**: under active development! We’d love to hear from you on how
-you would like to use locations services R packages. Please [start a
-discussion](https://github.com/R-ArcGIS/arcgis/discussions) and we’ll
-get back to you there!
+arcgis is a meta-package that loads ArcGIS location services packages
+for R. It provides a comprehensive suite of tools for working with
+ArcGIS Data and Location services for ArcGIS Online, ArcGIS Enterprise,
+and Location Platform.
 
-arcgis is a meta-package that loads ArcGIS location services packages.
-As of this writing, it includes the packages
-[`{arcgislayers}`](https://github.com/R-ArcGIS/arcgislayers), and
-[`{arcgisutils}`](https://github.com/R-ArcGIS/arcgisutils).
+## Included Packages
 
-- `arcgislayers` is the workhorse package that interacts with feature
-  services and image servers
-- `arcgisutils` is a developer oriented package that is used for
-  crafting requests to be used by other location service packages such
-  as `arcgislayers`
+This package installs and loads the following R-ArcGIS ecosystem
+packages:
 
-Please refer to [`arcgislayers`](https://r.esri.com/arcgislayers/)
-package site for examples.
+- **[{arcgisutils}](https://github.com/r-arcgis/arcgisutils)**:
+  Developer-oriented utility functions providing the building blocks for
+  R packages that work with ArcGIS Location Services. Handles
+  authorization, Esri JSON construction and parsing, and geometry
+  conversions.
+
+- **[{arcgislayers}](https://github.com/r-arcgis/arcgislayers)**: The
+  workhorse package for reading, writing, publishing, and managing
+  vector and raster data via ArcGIS location services REST API
+  endpoints. Works with ArcGIS Enterprise, ArcGIS Online, and ArcGIS
+  Platform.
+
+- **[{arcpbf}](https://github.com/r-arcgis/arcpbf)**: Fast processing of
+  ArcGIS FeatureCollection protocol buffers in R. Designed to work
+  seamlessly with httr2 and integrates with sf for spatial data
+  workflows.
+
+- **[{arcgisgeocode}](https://github.com/r-arcgis/arcgeocode)**: A
+  robust interface to ArcGIS geocoding services. Provides capabilities
+  for reverse geocoding, finding address candidates,
+  character-by-character search autosuggestion, and batch geocoding.
+
+- **[{calcite}](https://github.com/r-arcgis/calcite)**: Bindings to the
+  Calcite Design System JavaScript component library. Enables creation
+  of interactive web applications and static HTML using ArcGIS design
+  patterns.
 
 ## Installation
+
+Install the metapackage from cran with:
+
+``` r
+install.packages("arcgis")
+```
 
 You can install the development version of arcgis from
 [GitHub](https://github.com/) with:
@@ -35,21 +61,7 @@ You can install the development version of arcgis from
 remotes::install_github("R-ArcGIS/arcgis")
 ```
 
-## Example
+## Learn More
 
-``` r
-library(arcgis)
-#> Attaching core arcgis packages:
-#>   - {arcgisutils} v0.1.0
-#>   - {arcgislayers} v0.1.0
-
-health_rankings_url <- "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/2022_County_Health_Rankings/FeatureServer"
-
-arc_open(health_rankings_url)
-#> <FeatureServer <3 layers, 0 tables>>
-#> CRS: 4326
-#> Capabilities: Query,Extract
-#>   0: Country (esriGeometryPolygon)
-#>   1: State (esriGeometryPolygon)
-#>   2: County (esriGeometryPolygon)
-```
+To learn more about the R-ArcGIS Bridge project, visit the [developer
+site]((https://developers.arcgis.com/r-bridge))

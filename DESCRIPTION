@@ -8,23 +8,23 @@ Description: Provides easy installation and loading of core ArcGIS
     location services packages 'arcgislayers', 'arcgisutils',
     'arcgisgeocode', and 'arcgisplaces'. Enabling developers to interact
     with spatial data and services from 'ArcGIS Online', 'ArcGIS
-    Enterprise', and 'ArcGIS Platform'. Learn more about the 'arcgis'
+    Enterprise', and 'ArcGIS Location Platform'. Learn more about the 'arcgis'
     meta-package at <https://developers.arcgis.com/r-bridge/>.
 Language: en
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    arcgisgeocode (>= 0.1.0),
-    arcgislayers (>= 0.2.0),
-    arcgisplaces (>= 0.1.0),
-    arcgisutils (>= 0.3.0),
+    arcgisgeocode (>= 0.4.0),
+    arcgislayers (>= 0.5.0),
+    arcgisplaces (>= 0.1.2),
+    arcgisutils (>= 0.4.0),
     cli,
-    httr2 (>= 1.0.0),
+    httr2 (>= 1.1.2),
     utils
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Suggests: 
+Suggests:
     arcpbf,
     calcite,
     testthat (>= 3.0.0)
@@ -32,4 +32,4 @@ Config/testthat/edition: 3
 Config/Needs/website: rmarkdown
 URL: https://github.com/R-ArcGIS/arcgis/, https://developers.arcgis.com/r-bridge/
 Config/rextendr/version: 0.3.1.9000
-SystemRequirements: Cargo (Rust's package manager), rustc
+SystemRequirements: Cargo (Rust's package manager), rustc, xz
