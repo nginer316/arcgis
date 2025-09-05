@@ -8,14 +8,14 @@
 [![R-CMD-check](https://github.com/R-ArcGIS/arcgis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/R-ArcGIS/arcgis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-arcgis is a meta-package that loads ArcGIS location services packages
+`{arcgis}` is a meta-package that loads ArcGIS Location Services packages
 for R. It provides a comprehensive suite of tools for working with
-ArcGIS Data and Location services for ArcGIS Online, ArcGIS Enterprise,
-and Location Platform.
+ArcGIS data and location services for ArcGIS Online, ArcGIS Enterprise,
+and ArcGIS Location Platform.
 
 ## Included Packages
 
-This package installs and loads the following R-ArcGIS ecosystem
+This package installs and loads the following R-ArcGIS Bridge ecosystem
 packages:
 
 - **[{arcgisutils}](https://github.com/r-arcgis/arcgisutils)**:
@@ -26,13 +26,13 @@ packages:
 
 - **[{arcgislayers}](https://github.com/r-arcgis/arcgislayers)**: The
   workhorse package for reading, writing, publishing, and managing
-  vector and raster data via ArcGIS location services REST API
-  endpoints. Works with ArcGIS Enterprise, ArcGIS Online, and ArcGIS
-  Platform.
+  vector and raster data via ArcGIS Location Services REST API
+  endpoints. Works with ArcGIS Online, ArcGIS Enterprise, and ArcGIS
+  Location Platform.
 
 - **[{arcpbf}](https://github.com/r-arcgis/arcpbf)**: Fast processing of
   ArcGIS FeatureCollection protocol buffers in R. Designed to work
-  seamlessly with httr2 and integrates with sf for spatial data
+  seamlessly with `{httr2}` and integrates with `{sf}` for spatial data
   workflows.
 
 - **[{arcgisgeocode}](https://github.com/r-arcgis/arcgeocode)**: A
@@ -47,13 +47,13 @@ packages:
 
 ## Installation
 
-Install the metapackage from cran with:
+Install the metapackage from CRAN with:
 
 ``` r
 install.packages("arcgis")
 ```
 
-You can install the development version of arcgis from
+You can install the development version of `{arcgis}` from
 [GitHub](https://github.com/) with:
 
 ``` r
